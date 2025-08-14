@@ -11,7 +11,7 @@ export default function Indexpage() {
 
   const handleq = () => {
     console.log(nickname);
-    navigate("/result");
+    navigate("/question");
   };
 
   return (
@@ -20,7 +20,7 @@ export default function Indexpage() {
       <h1 className="text-base">
         당신은 에겐일까요, 테토일까요? 테스트를 통해 알아보아요.
       </h1>
-      <img src="./public/gender.png" alt="남녀 사진" className="w-[50%] my-8" />
+      <img src="/gender.png" alt="남녀 사진" className="w-[50%] my-8" />
       <input
         type="text"
         placeholder="닉네임을 입력하세요."

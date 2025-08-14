@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexPage from "./components/Indexpage";
+import QuestionPage from "./components/QuestionPage";
 import ResultPage from "./components/ResultPage";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<IndexPage />} />
+            <Route path="/question" element={<QuestionPage />} />
             <Route path="/result" element={<ResultPage />} />
           </Routes>
         </main>

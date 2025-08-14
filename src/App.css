@@ -1,3 +1,124 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* ------------------------- */
+.app {
+  padding: 24px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.result-header {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+/* Button_list.jsx 파일 부분 시작 */
+.btn-list {
+  position: absolute;       
+  right: 0;                
+  top: 50%;                 
+  transform: translateY(-50%);
+  background-color: #4e4e4e;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Button_list.jsx 파일 부분 끝 */
+
+.result_h1 {
+  position: relative;
+  text-align: center;
+  padding-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-main {
+  display: flex;
+  justify-content: center;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 960px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.result-media {
+  width: 100%;
+  min-width: 240px;
+}
+
+.result-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* ImgBox.jsx 파일 부분*/
+.imgbox {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f6f7f9;
+  border: 1px solid #eef0f3;
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgbox-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.imgbox-placeholder {
+  color: #98a2b3;
+  font-size: 14px;
+}
+
+/* ResultSub.jsx 파일 부분 */
+.result-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.result-desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #475467;
+  margin: 0;
+}
+
+
+@media (max-width: 768px) {
+  .result-card {
+    flex-direction: column;
+  }
+
+  .result-media {
+    width: 100%;
+  }
+}

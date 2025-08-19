@@ -10,8 +10,7 @@ export default function Indexpage() {
   };
 
   const handleq = () => {
-    console.log(nickname);
-    navigate("/question");
+    navigate("/question", { state:{nickname} });
   };
 
   return (

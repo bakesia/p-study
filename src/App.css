@@ -32,31 +32,26 @@
 
 /* Button_list.jsx 파일 부분 끝 */
 
-.result_h1 {
-  position: relative;
-  text-align: center;
-  padding-right: 100px;
-  margin-left: 100px;
-  margin-bottom: 16px;
-  font-size: 24px;
-  font-weight: 700;
-}
 
 .result-main {
   display: flex;
+  align-items: center;
   justify-content: center;
+  padding: 32px 16px; 
 }
+
 
 .result-card {
   display: flex;
   flex-direction: column;
   gap: 24px;
   width: 100%;
-  max-width: 960px;
+  max-width: 720px;
   padding: 24px;
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
   background: #fff;
+  margin: 0 auto;
 }
 
 .result-media {
@@ -64,17 +59,28 @@
   min-width: 240px;
 }
 
+.result-h1 {                   
+  text-align: center;
+  align-items: center;
+  padding-right: 100px;
+  margin-left: 100px;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
 .result-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 12px;
   justify-content: center;
 }
-
+.result_Button{
+  
+}
 /* ImgBox.jsx 파일 부분*/
 .imgbox {
+  position: relative;
   border-radius: 12px;
   overflow: hidden;
   background: #f6f7f9;
@@ -96,12 +102,15 @@
 .imgbox-placeholder {
   color: #98a2b3;
   font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
 }
 
 /* ResultSub.jsx 파일 부분 */
 .result-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 800;
   margin: 0;
 }
 
@@ -116,6 +125,7 @@
 @media (max-width: 768px) {
   .result-card {
     flex-direction: column;
+    max-width: 100%;
   }
 
   .result-media {

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom"; 
 import questions from "../data/questions.json";
 
 export default function QuestionPage() {
@@ -7,6 +7,8 @@ export default function QuestionPage() {
   const [gender, setGender] = useState(null);
   const [score, setScore] = useState({ 에겐: 0, 테토: 0 });
   const navigate = useNavigate();
+  const location = useLocation(); 
+  const nickname = location.state?.nickname 
 
   const handleAnswer = (value) => {
     if (currentIndex === 0) {
@@ -26,15 +28,17 @@ export default function QuestionPage() {
       setCurrentIndex((prev) => prev + 1);
     } else {
       calculateResult();
-      navigate("/result");
     }
   };
 
   const calculateResult = () => {
     const finalType = score.에겐 > score.테토 ? "에겐" : "테토";
-    const finalResult = finalType + gender;
-    console.log(finalResult);
-  };
+    const genderText = gender === "male" ? "남" : "녀";
+    const finalResult = finalType + genderText;
+     navigate("/result", {
+        state: { nickname, finalType, gender, finalResult },
+  });
+};
 
   const currentQuestion = questions[currentIndex];
 
